@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+</head>
+
+<body>
+    <header>
+        <h1>Welcome to my Portfolio</h1>
+        <nav>
+            <a href="#aboutme">About Me</a>
+            <a href="#projects">My Projects</a>
+        </nav>
+    </header>
+    <div class="aboutme" id="aboutme">
+        <div>
+            <h1>About Me</h1>
+            <h1>Hi, I'm Raymond Joseph P. Galupe</h1>
+            <h3>
+                I am a 3rd year college student of section WD - 302 in Holy Angel University.<br>
+                The languages that I've tried are: <br> 
+                <ul>
+                    <li>Java</li>
+                    <li>Python</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>MySQL</li>
+                    <li>MongoDB</li>
+                    <li>Angular</li>
+                </ul>
+                I'm still learning all of these languages and now I can mostly do some basic projects using these languages.
+            </h3>
+        </div>
+        <div class="image-id">
+            <img src="./img/id.jpg" alt="img">
+        </div>
+    </div>
+    <div class="container">
+        <!-- Portfolio Projects -->
+        <h1>My Projects</h1>
+        <div class="projects" id="projects">
+            <div class="card">
+                <img src="./img/intdemo.png" alt="Project 1">
+                <h2>Integer Demo</h2>
+                <p>In this project you will see on how to print integers.</p>
+                <div class="list">
+                    <ul>Skills used: Java</ul>
+                </div> 
+            </div>
+            <div class="card">
+                <img src="./img/random.png" alt="Project 2">
+                <h2>Random Integers</h2>
+                <p>This project prints random integers.</p>
+                <div class="list">
+                    <ul>Skills used: Python</ul>
+                </div> 
+            </div>
+            <div class="card">
+                <img src="./img/table.png" alt="Project 3">
+                <h2>Table</h2>
+                <p>This was my table schedule project that I made using only HTML.</p>
+                <div class="list">
+                    <ul>Skills used: HTML</ul>
+                </div> 
+            </div>
+            <div class="card">
+                <img src="./img/latin.png" alt="Project 4">
+                <h2>Array</h2>
+                <p>This is how arrays are made in php</p>
+                <div class="list">
+                    <ul>Skills used: PHP</ul>
+                </div>
+            </div>
+            <div class="card">
+                <img src="./img/fb.png" alt="Project 5">
+                <h2>Form</h2>
+                <p>In this project I made a form</p>
+                <div class="list">
+                    <ul>Skills used: HTML and CSS</ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal">
+        <div class="modal-content">
+            <button type="button" class="modal-close">Close</button>
+            <img src="" alt="">
+            <h2></h2>
+            <p></p>
+        </div>
+    </div>
+
+
+    <!-- JavaScript -->
+    <script>
+        const cards = document.querySelectorAll('.card');
+        const modal = document.querySelector('.modal');
+        const modalImg = document.querySelector('.modal-content img');
+        const modalTitle = document.querySelector('.modal-content h2');
+        const modalDesc = document.querySelector('.modal-content p');
+        const closeModal = document.querySelector('.modal-close');
+
+        cards.forEach(card => {
+            card.addEventListener('click', () => {
+                modal.style.display = 'block';
+                modalImg.src = card.querySelector('img').src;
+                modalTitle.textContent = card.querySelector('h2').textContent;
+                modalDesc.textContent = card.querySelector('p').textContent;
+            });
+        });
+
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+
+        modal.addEventListener('click', e => {
+            if (e.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+
+</html>
