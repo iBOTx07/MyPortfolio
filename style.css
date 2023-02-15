@@ -66,11 +66,19 @@ header nav a {
 }
 
 .image-id {
-  position: absolute;
-  bottom: 450px;
+  position: relative;
+  float: right;
+  bottom: 350px;
   right: 106px;
-  width: 300px;
+  width: 400px;
   height: 300px;
+}
+
+@media only screen and (max-width: 480px) {
+  img {
+    display: inline-block;
+    width: 100%;
+  }
 }
 
 img {
