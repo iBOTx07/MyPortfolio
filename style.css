@@ -65,19 +65,26 @@ header nav a {
   text-align: left;
 }
 
-.image-id {
-  position: relative;
-  float: right;
-  bottom: 350px;
-  right: 106px;
-  width: 400px;
-  height: 300px;
+img {
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+
 }
 
-@media only screen and (max-width: 480px) {
+.image-id{
+  position: relative;
+  left: 1100px;
+  bottom: 350px;
+  width: 500px;
+  height: 200px;
+
+}
+
+@media only screen and (max-width: 768px) {
   img {
-    display: inline-block;
-    width: 80%;
+    width: 50%;
+    margin: 0;
   }
 }
 
